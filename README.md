@@ -1,0 +1,1 @@
+# translator_with_pyqt6
