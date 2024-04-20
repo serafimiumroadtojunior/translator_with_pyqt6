@@ -22,12 +22,12 @@ class App(QMainWindow):
         self.ui.pushButton_4.clicked.connect(self.copy_text2) 
 
     def trans(self):
-        language = self.ui.comboBox_2.currentText() #узнаем текущий текст с комбобокса
+        language = self.ui.comboBox_2.currentText() 
         suffix = self.ui.languages[language]
-        text = self.ui.plainTextEdit.toPlainText() #  получаем текст с plain text edit
+        text = self.ui.plainTextEdit.toPlainText() 
         translation = self.translator.translate(text, dest=suffix)
         self.ui.plainTextEdit_2.clear()
-        self.ui.plainTextEdit_2.setPlainText(translation.text) # устанавливаем текст в plain text edit
+        self.ui.plainTextEdit_2.setPlainText(translation.text) 
 
     def copy_text1(self):
             text_to_copy = self.ui.plainTextEdit.toPlainText()
